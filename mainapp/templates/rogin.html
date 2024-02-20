@@ -1,0 +1,21 @@
+<html lang = "ja">
+	<head>
+		<title>family</title>
+	</head>
+	<h1 style = "background-color:aqua">family</h1>
+	{% if s == 1%}
+	<p style = "font-size:150">
+	<a class = "worn" style="color:red">idもしくはpasswordが誤っています</a>
+	{% endif %}
+	
+	<form action = "/user" method = "POST"> <!--submitを押してみろ /userに飛ぶぞ(rogin.py参照)-->
+			<p style = "font-size:130">
+		<p>ID:
+			<input type = "text" name = "ID"></p>
+		<p>Password:
+		<input type = "text" name = "Pass"></p>
+		<input class = "rogin" type = "submit" value="ログイン">
+	</form>
+	</p>
+	
+</html>

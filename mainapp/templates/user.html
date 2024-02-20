@@ -1,0 +1,44 @@
+<html lang = "ja">
+	<head>
+		<title>family</title>
+	</head>
+	<body>
+		<p style = "font-size : 130">
+		<a class = "id">弟</a>
+		{%if corrent["001"] == '1'%}
+		<a style = "background-color:lightcyan">在宅</a> 
+		{% else %}
+		<a style = "background-color:lightpink">外出</a> 
+		{% endif %}
+		<br><br>
+		<a class = "id">兄</a>
+		{%if corrent["002"] == '1'%}
+		<a style = "background-color:lightcyan">在宅</a> 
+		{% else %}
+		<a style = "background-color:lightpink">外出</a>
+		{% endif %}
+		<br><br>
+		<a class = "id">母</a>
+		{%if corrent["003"] == '1'%}
+		<a style = "background-color:lightcyan">在宅</a> 
+		{% else %}
+		<a style = "background-color:lightpink">外出</a>
+		{% endif %}
+		<br><br>
+		<a class = "id">父</a>
+		{%if corrent["004"] == '1'%}
+		<a style = "background-color:lightcyan">在宅</a> 
+		{% else %}
+		<a style = "background-color:lightpink">外出</a>
+		{% endif %}
+		</a>
+	</body>
+	<form action = "/retarn" method = "POST"> <!--submitを押してみろ /userに飛-->
+		<input type = "submit" value="帰宅" style="font-size : 80;background-color: lightcyan">
+	</form>
+	<form action = "/goto" method = "POST"> <!--submitを押してみろ /userに飛ぶぞ(rogin.py参照)-->
+		<input type = "submit" value="外出" style="font-size : 80;background-color: lightpink">
+	</form>
+	
+	
+</html>
